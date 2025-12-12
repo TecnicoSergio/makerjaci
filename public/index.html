@@ -1,43 +1,1168 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="pt-BR">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LojinhaJaci</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9fafb;
+        }
+        
+        .navbar {
+            background: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: #106e3a !important;
+        }
+        
+        .hero {
+            background-color: #1a3c34;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .hero h1 {
+            font-weight: bold;
+            color: #e1e7e3;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card img {
+            border-radius: 12px 12px 0 0;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .card-title {
+            font-weight: bold;
+        }
+        
+        .footer {
+            background: #0f172a;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        
+        .footer a {
+            color: #16a34a;
+            text-decoration: none;
+        }
+    </style>
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Lojinha-da-Jaci</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Todos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Maquiagem</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Creme Corporal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Perfumes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Esfoliantes</a></li>
+                    <!-- Ícone do Carrinho na Navbar -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasCarrinho" role="button" aria-controls="offcanvasCarrinho">
+          🛒 Carrinho
+          </a>
+                    </li>
+
+                    <!-- Painel Offcanvas do Carrinho -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrinho" aria-labelledby="offcanvasCarrinhoLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasCarrinhoLabel">🛒 Carrinho de Compras</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul id="lista-carrinho" class="list-group"></ul>
+                            <p class="mt-3"><strong>Total: R$ <span id="total">0.00</span></strong></p>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <section class="py-5 text-center text-white" id="inicio" style="
+  background-image: url('natal.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+">
+            <h1>Bem-vindo à <span style="color:#16a34a;">Lojinha da Jaci</span></h1>
+            <p>Perfumes, Esfoliantes, Creme Corporal, Maquiagem.<br>Qualidade e beleza que você merece.</p>
+        </section>
+
+        <!-- PRODUTOS -->
+        <div class="container">
+            <h3 class="mb-4" style="color: white;">Todos os Produtos</h3>
+            <div class="row g-4">
+
+
+                <!-- INICIO CAIXA DEPOIS DO ADICIONAR AO CARRINHO -->
+
+                <body>
+
+                    <!-- Produto 1 -->
+                    <!-- Produto -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk1.jpg" alt="Fone Ouvido Bluetooth">
+                            <div class="card-body">
+                                <h5 class="card-title">JBL</h5>
+                                <p class="card-text">Fone Bluetooth</p>
+                                <h6 class="text-success fw-bold">R$ 150,00</h6>
+
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="Fone de Ouvido Bluetooth" data-preco="150.00" data-descricao="Qualidade e tecnologia." data-img="Fone-JBL.webp" data-sizes="" data-colors="Preto"
+                                    data-default-size="" data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+                                <p>
+                                    <button class="btn btn-style" type="button" data-bs-toggle="collapse" data-bs-target="#descricaoproduto07" aria-expanded="false" aria-controls="descricaoproduto07">Descrição do Produto</button>
+                                </p>
+
+                                <div style="min-height: 120px;">
+                                    <div class="collapse collapse-horizontal" id="descricaoproduto07">
+                                        <div class="card card-body" style="width: 300px;">
+                                            🎧 JBL Tune 510BT – Som potente e liberdade sem fio Experimente graves intensos e conforto o dia todo com o JBL Tune 510BT: Tecnologia JBL Pure Bass para graves profundos e envolventes Bluetooth multipontos: conecte dois dispositivos e alterne facilmente
+                                            Até 40h de bateria com carregamento rápido (5 min = 2h de uso) Design leve, dobrável e confortável com almofadas macias Controle de chamadas e assistente de voz (Siri/Google) Drivers de 32mm | Frequência: 20Hz–20kHz
+                                            | Peso: 160g Ideal para música, chamadas e produtividade com estilo e praticidade
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outro Produto -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk2.jpg" alt="Fone Bluetooth">
+                            <div class="card-body">
+                                <h5 class="card-title">Fone de Ouvido</h5>
+                                <p class="card-text">Bluetooth P9 Headphone Sem Fio Cor Variada.</p>
+                                <h6 class="text-success fw-bold">R$ 100,00</h6>
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="Fone Bluetooth P9 Headphone" data-preco="100.00" data-descricao="Qualidade e tecnologia." data-img="fone-P9.PNG" data-sizes="" data-colors="Preto"
+                                    data-default-size="" data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+                                <p>
+                                    <button class="btn btn-style" type="button" data-bs-toggle="collapse" data-bs-target="#descricaoproduto03" aria-expanded="false" aria-controls="descricaoproduto03">Descrição do Produto</button>
+                                </p>
+
+                                <div style="min-height: 120px;">
+                                    <div class="collapse collapse-horizontal" id="descricaoproduto03">
+                                        <div class="card card-body" style="width: 300px;">
+                                            Experimente a liberdade com o Fone de Ouvido P9! Conexão Bluetooth sem fio para uma experiência sonora incrível, onde quer que você esteja. Fone De Ouvido P9 Headphone Bluetooth. Contém: 1 unidade. Modelo sem fio bluetooth. Design moderno e confortável!
+                                            Alta definição de som! Suporte a codec de áudio AAC/SBC. OBS: Enviado em cores variadas de acordo com a disponibilidade em estoque. Medidas: Altura: 19cm
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Outro Produto -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk3.jpg" alt="SmartWatchs">
+                            <div class="card-body">
+                                <h5 class="card-title">SmartWatch T800</h5>
+                                <p class="card-text">T800 Ultra 1.000 INFINITE display cor variada(Vem com carregador).</p>
+                                <h6 class="text-success fw-bold">R$ 120,00</h6>
+
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="SmartWatch T800" data-preco="120.00" data-descricao="Qualidade e tecnologia." data-img="t800.PNG" data-sizes="" data-colors="Preto" data-default-size=""
+                                    data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+                                <p>
+                                    <button class="btn btn-style" type="button" data-bs-toggle="collapse" data-bs-target="#descricaoproduto02" aria-expanded="false" aria-controls="descricaoproduto03">Descrição do Produto</button>
+                                </p>
+
+                                <div style="min-height: 120px;">
+                                    <div class="collapse collapse-horizontal" id="descricaoproduto02">
+                                        <div class="card card-body" style="width: 300px;">
+                                            O Smartwatch T800 Ultra é uma inovação em tecnologia vestível, projetado para acompanhar o ritmo acelerado do seu estilo de vida moderno. Combinando elegância e funcionalidade em um dispositivo compacto, o T800 Ultra redefine o que um relógio pode fazer.
+                                            Equipado com um processador de última geração e um sistema operacional altamente otimizado, o T800 Ultra oferece uma navegação suave e rápida, alternando entre aplicativos e recursos com facilidade. Conectividade
+                                            Sem Limites: Compatível com smartphones iOS e Android, este smartwatch permite que você receba notificações instantâneas de chamadas, mensagens e redes sociais diretamente no seu pulso. Além disso, com sua conectividade
+                                            Bluetooth avançada, você pode controlar remotamente sua música favorita do seu smartphone com apenas um toque. se quiser outra cor de pulseira deixei mensagem Aviso legal • A duração da bateria depende de como
+                                            você usa o produto.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Outro Produto -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk4.jpg" alt="SmartWatchs">
+                            <div class="card-body">
+                                <h5 class="card-title">SmartWatchs</h5>
+                                <p class="card-text">Modelo D20.</p>
+                                <h6 class="text-success fw-bold">R$ 50,00</h6>
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="SmartWatch" data-preco="50.00" data-descricao="Qualidade e tecnologia." data-img="SmarWatch1.png" data-sizes="" data-colors="Preto" data-default-size=""
+                                    data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+                                <p>
+                                    <button class="btn btn-style" type="button" data-bs-toggle="collapse" data-bs-target="#descricaoproduto05" aria-expanded="false" aria-controls="descricaoproduto05">Descrição do Produto</button>
+                                </p>
+
+                                <div style="min-height: 120px;">
+                                    <div class="collapse collapse-horizontal" id="descricaoproduto05">
+                                        <div class="card card-body" style="width: 300px;">
+                                            ⌚ Smartwatch D20 – Seu dia a dia mais conectado Tecnologia, saúde e estilo no seu pulso! O D20 oferece: Monitoramento completo: frequência cardíaca, pressão arterial, oxigenação, sono e calorias Funções esportivas: corrida, abdominal, corda e pedômetro
+                                            Notificações inteligentes: chamadas, mensagens e redes sociais Tela sensível ao toque de 1.3" com tema personalizável Controle remoto de câmera e localizador de celular Resistência IP67 a respingos e suor Compatível
+                                            com Android e iOS via app FitPro Bateria de até 7 dias com carregamento USB direto no relógio Ideal para quem busca praticidade, saúde e conectividade com ótimo custo-benefício
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Outro Produto -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk5.jpg" alt="SmartWatchs">
+                            <div class="card-body">
+                                <h5 class="card-title">SmartWatch K99 PRO</h5>
+                                <p class="card-text">K99 PRO 10 em 1 Faz e recebe ligações (Vem com 10 pulseiras e carregador).</p>
+                                <h6 class="text-success fw-bold">R$ 180,00</h6>
+
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="SmartWatch K99 PRO- Com 10 Pulseiras" data-preco="180.00" data-descricao="Qualidade e tecnologia." data-img="smartk99.PNG" data-sizes="" data-colors="Preto"
+                                    data-default-size="" data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Outro Produto -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk6.jpg" alt="Bluetooth">
+                            <div class="card-body">
+                                <h5 class="card-title">Fone de Ouvido I12</h5>
+                                <p class="card-text">Fone de Ouvido I12.</p>
+                                <h6 class="text-success fw-bold">R$ 50,00</h6>
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="Fone de Ouvido Bluetooth" data-preco="50.00" data-descricao="Qualidade e tecnologia." data-img="Bluetooth I12.png" data-sizes="" data-colors="Preto"
+                                    data-default-size="" data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Outro Produto -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk7.jpg" alt="SmartBand">
+                            <div class="card-body">
+                                <h5 class="card-title">SmartBand </h5>
+                                <p class="card-text">Modelo M6.</p>
+                                <h6 class="text-success fw-bold">R$ 50,00</h6>
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="SmartBand M6" data-preco="50.00" data-descricao="Qualidade e tecnologia." data-img="SmartBand3.png" data-sizes="" data-colors="Preto" data-default-size=""
+                                    data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Outro Produto -->
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk8.jpg" alt="Mouse ">
+                            <div class="card-body">
+                                <h5 class="card-title">Mouse</h5>
+                                <p class="card-text">Bluetooth Recarregavel.</p>
+                                <h6 class="text-success fw-bold">R$ 50,00</h6>
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="Mouse Bluetooth Recarregavel" data-preco="50.00" data-descricao="Qualidade e tecnologia." data-img="mouse.PNG" data-sizes="" data-colors="Preto"
+                                    data-default-size="" data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--ACRESCENTANDO IMAGENS E PRODUTOS-->
+                    <!-- Outro Produto -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk9.jpg" alt="Cabo USB Tipo C">
+                            <div class="card-body">
+                                <h5 class="card-title">Cabo USB Tipo C</h5>
+                                <p class="card-text">Super Resistente 2 Metros Branco</p>
+                                <h6 class="text-success fw-bold">R$ 25,00</h6>
+
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="Cabo USB Tipo C- 2 Metros" data-preco="25.00" data-descricao="Qualidade e tecnologia." data-img="cabo1.png" data-sizes="" data-colors="Preto"
+                                    data-default-size="" data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Outro Produto -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk10.jpg" alt="Bluetooth">
+                            <div class="card-body">
+                                <h5 class="card-title">Fone de Ouvido Xiaomi</h5>
+                                <p class="card-text">Redmi Airdots</p>
+                                <h6 class="text-success fw-bold">R$ 30,00</h6>
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="Fone de Ouvido Bluetooth Xiaomi Redmi Airdots" data-preco="30.00" data-descricao="Qualidade e tecnologia." data-img="fone1.png" data-sizes=""
+                                    data-colors="Preto" data-default-size="" data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Outro Produto -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk11.jpg" alt="SmartWatch">
+                            <div class="card-body">
+                                <h5 class="card-title">Relógio SmartWatch K9</h5>
+                                <p class="card-text">K9 PRO 7 em 1 Faz e recebe ligações (Vem com 7 pulseiras e carregador).</p>
+                                <h6 class="text-success fw-bold">R$ 160,00</h6>
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="SmartWatch K9 PRO 7 em 1(vem com 7 pulseiras)" data-preco="160.00" data-descricao="Qualidade e tecnologia." data-img="smart45.png" data-sizes=""
+                                    data-colors="Preto" data-default-size="" data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Outro Produto -->
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk12.jpg" alt="SmartWatch">
+                            <div class="card-body">
+                                <h5 class="card-title">Relógio SmartWatch T800</h5>
+                                <p class="card-text">T800 Ultra 1.000 INFINITE display cor variada(Vem com carregador).</p>
+                                <h6 class="text-success fw-bold">R$ 120,00</h6>
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="SmartWatch T800 Ultra 1.000 INFINITE" data-preco="120.00" data-descricao="Qualidade e tecnologia." data-img="smart54.png" data-sizes="" data-colors="Preto"
+                                    data-default-size="" data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--FINAL DO IMAGENS E PRODUTOS-->
+
+                    <!-- Outro Produto -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk13.jpg" alt="SmartWatch">
+                            <div class="card-body">
+                                <h5 class="card-title">SmartWatch </h5>
+                                <p class="card-text">K9 ULTRA 2- com 3 pulseiras</p>
+                                <h6 class="text-success fw-bold">R$ 150,00</h6>
+
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="K9 ULTRA 2- com 3 pulseiras" data-preco="150.00" data-descricao="Qualidade e tecnologia." data-img="k9_ULTRA2.avif" data-sizes="" data-colors="Preto"
+                                    data-default-size="" data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Outro Produto -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk14.jpg" alt="SmartWatch">
+                            <div class="card-body">
+                                <h5 class="card-title">SmartWatch</h5>
+                                <p class="card-text">K13 Mini com 7 pulseiras</p>
+                                <h6 class="text-success fw-bold">R$ 170,00</h6>
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="k13 mini com 7 pulseiras" data-preco="170.00" data-descricao="Qualidade e tecnologia." data-img="k13-mini.webp" data-sizes="" data-colors="Preto"
+                                    data-default-size="" data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Outro Produto -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk15.jpg" alt="SmartWatch">
+                            <div class="card-body">
+                                <h5 class="card-title">Relógio SmartWatch S28</h5>
+                                <p class="card-text">O Espetacular, Impactante S28- Com 2 Pulseiras.</p>
+                                <h6 class="text-success fw-bold">R$ 140,00</h6>
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="SmartWatch S28 Com 2 Pulseiras" data-preco="140.00" data-descricao="Qualidade e tecnologia." data-img="S28.jpg" data-sizes="" data-colors="Preto"
+                                    data-default-size="" data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Outro Produto -->
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="mk16.jpg" alt="SmartWatch">
+                            <div class="card-body">
+                                <h5 class="card-title">SmartWatch S9</h5>
+                                <p class="card-text">S9 ULTRA PRO MAX COM 2 PULSEIRAS.</p>
+                                <h6 class="text-success fw-bold">R$ 120,00</h6>
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quantidadeModal" data-produto="SmartWatch S9 ULTRA PRO MAX COM 2 PULSEIRAS " data-preco="120.00" data-descricao="Qualidade e tecnologia." data-img="S9-ULTRA-PRO-MAX.webp" data-sizes=""
+                                    data-colors="Preto" data-default-size="" data-default-color="Preto">
+  Adicionar ao Carrinho
+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IMGENS EXTRAS -->
+
+                    <div class="card-group">
+                        <div class="card">
+                            <img src="mk17.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                                <p class="card-text"><small class="text-body-secondary"></small></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="mk18.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                                <p class="card-text"><small class="text-body-secondary"></small></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="mk19.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                                <p class="card-text"><small class="text-body-secondary"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- IMGENS EXTRAS -->
+
+
+                    <!-- MODAL DO CARRINHO -->
+                    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <!-- Cabeçalho -->
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="cartModalLabel">🛒 Carrinho de Compras</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                </div>
+
+                                <!-- Corpo do Modal (onde os itens serão listados) -->
+                                <div class="modal-body" id="cartItems">
+                                    <p class="text-muted">Seu Carrinho está Vazio</p>
+                                </div>
+
+                                <!-- Rodapé -->
+                                <div class="modal-footer d-flex flex-column">
+                                    <h5 class="w-100 text-end">Total: <span id="cartTotal" class="text-success fw-bold">R$ 0,00</span></h5>
+
+                                    <!-- Botão PIX-->
+                                    <button id="finalizarCompra" class="btn btn-success w-100 mt-2">Finalizar Compra via PIX</button>
+
+                                    <!-- QR Code PIX (desativado por enquanto) -->
+                                    <!--<div id="pixArea" class="text-center mt-3" style="display:none;">
+                    <h6>Escaneie o QR Code para pagar:</h6>
+                    <img id="pixQRCode" src="" alt="QR Code PIX" class="img-fluid rounded shadow">
+                    <p class="mt-2"><strong>Chave PIX:</strong> 11940515107</p>
+                </div>-->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MODAL DE QUANTIDADE -->
+                    <div class="modal fade" id="quantidadeModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Selecionar Quantidade</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                </div>
+
+                                <div class="modal-body text-center">
+                                    <p id="produtoSelecionado"></p>
+
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <button class="btn btn-outline-secondary me-2" id="btnMenos">-</button>
+                                        <input type="number" id="quantidadeProduto" class="form-control text-center" style="width:80px;" value="1" min="1">
+                                        <button class="btn btn-outline-secondary ms-2" id="btnMais">+</button>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success" id="confirmarQuantidade">Adicionar</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FINAL DO MODAL DE QUANTIDADE -->
+
+            </div>
+        </div>
+
+        <!-- FormSubmit- Formulario para compra enviar para email -->
+
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+        <!-- Formulário que envia o pedido (vai para o iframe) -->
+        <form id="orderForm" action="https://formsubmit.co/lojarstechnology@gmail.com" method="POST" target="hidden_iframe" style="display:none;">
+            <input type="hidden" name="pedido" id="pedido">
+            <input type="hidden" name="total" id="total">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+
+        <!-- Botão único de finalizar (use apenas este) 
+                <button id="finalizarCompra" type="button">Finalizar Compra via Pix</button>-->
+
+        <!-- PASSO 2 - Cadastro + PIX (inicia escondido) -->
+        <div id="passo2" style="display:none; margin-top:20px;">
+            <h3 class="mb-4" style="color: white;">“Quase lá! Preencha seus dados para concluir sua compra. A equipe da Loja RsTech entrará em contato por e-mail para finalizar o processo.”</h3>
+
+
+            <form id="cadastroForm" action="https://formsubmit.co/lojarstechnology@gmail.com" method="POST">
+                <input type="hidden" name="pedido" id="pedido2">
+                <input type="hidden" name="total" id="total2">
+                <input type="hidden" name="_captcha" value="false">
+
+                <label class="mb-4" style="color: white;">Nome:</label>
+                <input type="text" name="nome" required>
+
+                <label class="mb-4" style="color: white;">Telefone:</label>
+                <input type="text" name="telefone" required>
+
+                <label class="mb-4" style="color: white;">Email:</label>
+                <input type="email" name="email" required>
+
+                <button type="submit">Confirmar Dados</button>
+            </form>
+
+            <!-- Área PIX (fica escondida até clicar no botão)-->
+            <div id="pixArea" style="display:none; margin-top:20px;">
+                <h3 class="mb-4" style="color: white;">Pagamento via PIX</h3>
+                <p class="mb-4" style="color: white;">Chave Pix: <strong class="mb-4" style="color: white;">11940515107</strong></p>
+                <img id="pixQRCode" src="qrcode-pix.png" alt="QR Code Pix" width="200">
+                <p class="mb-4" style="color: white;">Após o pagamento, envie o comprovante para nosso e-mail ou WhatsApp.</p>
+            </div>
+        </div>
+        <!-- Final do FormSubmit -->
+        </div>
+        </div>
+
+
+        <script>
+            // ================= Carrinho Global =================
+            window.carrinho = [];
+
+            // ================= Adicionar ao Carrinho =================
+            function adicionarAoCarrinho(produto, preco, descricao, img, qtd = 1, ) {
+                preco = Number(preco);
+                const item = {
+                    produto,
+                    preco,
+                    descricao,
+                    img,
+                    qtd,
+                    total: preco * qtd
+                };
+                window.carrinho.push(item);
+                atualizarCarrinho();
+            }
+
+            // ================= Atualizar Carrinho =================
+            function atualizarCarrinho() {
+                const cartItems = document.getElementById("cartItems");
+                const cartTotal = document.getElementById("cartTotal");
+
+                if (!cartItems || !cartTotal) return;
+
+                cartItems.innerHTML = "";
+                let total = 0;
+
+                if (!window.carrinho || window.carrinho.length === 0) {
+                    cartItems.innerHTML = '<p class="text-muted">Seu carrinho está vazio.</p>';
+                } else {
+                    window.carrinho.forEach((item, index) => {
+                        total += item.total;
+
+                        const itemHTML = `
+                <div class="d-flex justify-content-between align-items-center border-bottom py-2">
+                    <div class="d-flex align-items-center">
+                        <img src="${item.img}" alt="${item.produto}" width="50" class="me-2">
+                        <div>
+                            <strong>${item.produto}</strong><br>
+                            <small>${item.descricao}</small><br>
+                            <small>Qtd: ${item.qtd}</small>
+                        </div>
+                    </div>
+                    <div class="text-success fw-bold">R$ ${item.total.toFixed(2).replace('.', ',')}</div>
+                    <button class="btn btn-danger btn-sm ms-2" onclick="removerDoCarrinho(${index})">Remover</button>
+                </div>
+            `;
+                        cartItems.insertAdjacentHTML("beforeend", itemHTML);
+                    });
+                }
+
+                cartTotal.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+            }
+
+            // ================= Remover do Carrinho =================
+            function removerDoCarrinho(index) {
+                window.carrinho.splice(index, 1);
+                atualizarCarrinho();
+            }
+
+            // ================= Atualizar Preço =================
+            function atualizarPreco() {
+                const input = document.getElementById("quantidadeProduto");
+                const selecionado = document.getElementById("produtoSelecionado");
+                if (!input || !selecionado || !window.produtoTemp) return;
+
+                let qtd = parseInt(input.value);
+                let precoTotal = window.produtoTemp.preco * qtd;
+                selecionado.innerText = `${window.produtoTemp.produto} - R$ ${precoTotal.toFixed(2).replace('.', ',')}`;
+            }
+
+            // ================= Modal Quantidade =================
+            const modalQtd = document.getElementById("quantidadeModal");
+            if (modalQtd) {
+                modalQtd.addEventListener("show.bs.modal", function(event) {
+                    let button = event.relatedTarget;
+                    if (!button) return;
+
+                    let produto = button.getAttribute("data-produto");
+                    let preco = parseFloat(button.getAttribute("data-preco"));
+                    let descricao = button.getAttribute("data-descricao");
+                    let img = button.getAttribute("data-img");
+
+                    let sizesAttr = button.getAttribute("data-sizes");
+                    let colorsAttr = button.getAttribute("data-colors");
+
+                    let sizes = (sizesAttr || "").split(",").map(s => s.trim()).filter(s => s.length > 0);
+                    let colors = (colorsAttr || "").split(",").map(c => c.trim()).filter(c => c.length > 0);
+
+                    let defaultSize = button.getAttribute("data-default-size");
+                    let defaultColor = button.getAttribute("data-default-color");
+
+                    window.produtoTemp = {
+                        produto,
+                        preco,
+                        descricao,
+                        img
+                    };
+
+                    const inputQtd = document.getElementById("quantidadeProduto");
+                    if (inputQtd) inputQtd.value = 1;
+                    atualizarPreco();
+
+                    const selectSize = document.getElementById("");
+                    if (selectSize) {
+                        selectSize.innerHTML = "";
+                        if (sizes.length > 0) {
+                            sizes.forEach(size => {
+                                let option = document.createElement("option");
+                                option.value = size;
+                                option.textContent = size;
+                                if (defaultSize && size === defaultSize) option.selected = true;
+                                selectSize.appendChild(option);
+                            });
+                        } else {
+                            let option = document.createElement("option");
+                            option.value = "";
+                            option.textContent = "Único";
+                            option.selected = true;
+                            selectSize.appendChild(option);
+                        }
+                    }
+
+                    const selectColor = document.getElementById("");
+                    if (selectColor) {
+                        selectColor.innerHTML = "";
+                        if (colors.length > 0) {
+                            colors.forEach(color => {
+                                let option = document.createElement("option");
+                                option.value = color;
+                                option.textContent = color;
+                                if (defaultColor && color === defaultColor) option.selected = true;
+                                selectColor.appendChild(option);
+                            });
+                        } else {
+                            let option = document.createElement("option");
+                            option.value = "";
+                            option.textContent = "Padrão";
+                            option.selected = true;
+                            selectColor.appendChild(option);
+                        }
+                    }
+                });
+            }
+
+            // ================= Botões + e - =================
+            const btnMais = document.getElementById("btnMais");
+            if (btnMais) {
+                btnMais.addEventListener("click", () => {
+                    const input = document.getElementById("quantidadeProduto");
+                    if (input) {
+                        input.value = parseInt(input.value) + 1;
+                        atualizarPreco();
+                    }
+                });
+            }
+
+            const btnMenos = document.getElementById("btnMenos");
+            if (btnMenos) {
+                btnMenos.addEventListener("click", () => {
+                    const input = document.getElementById("quantidadeProduto");
+                    if (input && parseInt(input.value) > 1) {
+                        input.value = parseInt(input.value) - 1;
+                        atualizarPreco();
+                    }
+                });
+            }
+
+            // ================= Confirmar Adição =================
+            const confirmarBtn = document.getElementById("confirmarQuantidade");
+            if (confirmarBtn) {
+                confirmarBtn.addEventListener("click", () => {
+                    const qtd = parseInt(document.getElementById("quantidadeProduto").value);
+
+
+                    adicionarAoCarrinho(
+                        window.produtoTemp.produto,
+                        window.produtoTemp.preco,
+                        window.produtoTemp.descricao,
+                        window.produtoTemp.img,
+                        qtd,
+                    );
+
+                    const modal = bootstrap.Modal.getInstance(modalQtd);
+                    if (modal) modal.hide();
+
+                    const carrinhoModal = new bootstrap.Modal(document.getElementById("cartModal"));
+                    carrinhoModal.show();
+                });
+            }
+        </script>
+
+        <script>
+            /* ================= Carrinho unificado ================= */
+            window.carrinho = [];
+
+            // Adiciona produto (compatível com botões antigos)
+            function adicionarAoCarrinho(produto, preco, descricao, img, qtd = 1, ) {
+                preco = Number(preco);
+                const item = {
+                    produto,
+                    preco,
+                    descricao,
+                    img,
+                    qtd,
+                    total: preco * qtd
+                };
+                carrinho.push(item);
+                atualizarCarrinho();
+            }
+
+
+            function atualizarCarrinho() {
+                const cartItems = document.getElementById("cartItems");
+                const cartTotal = document.getElementById("cartTotal");
+
+                cartItems.innerHTML = "";
+                let total = 0;
+
+                if (!carrinho || carrinho.length === 0) {
+                    cartItems.innerHTML = '<p class="text-muted">Seu carrinho está vazio.</p>';
+                } else {
+                    carrinho.forEach((item, index) => {
+                        total += item.total;
+
+                        const itemHTML = `
+            <div class="d-flex justify-content-between align-items-center border-bottom py-2">
+                <div class="d-flex align-items-center">
+                    <img src="${item.img}" alt="${item.produto}" width="50" class="me-2">
+                    <div>
+                        <strong>${item.produto}</strong><br>
+                        <small>${item.descricao}</small><br>
+                        <small>Qtd: ${item.qtd}</small>
+                    </div>
+                </div>
+                <div class="text-success fw-bold">R$ ${item.total.toFixed(2).replace('.', ',')}</div>
+                <button class="btn btn-danger btn-sm ms-2" onclick="removerDoCarrinho(${index})">Remover</button>
+            </div>
+            `;
+                        cartItems.insertAdjacentHTML("beforeend", itemHTML);
+                    });
+                }
+
+                cartTotal.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+            }
+
+            function removerDoCarrinho(index) {
+                carrinho.splice(index, 1);
+                atualizarCarrinho();
+            }
+
+            /* ================= Funções PIX (CRC + Payload) ================= */
+            function calcularCRC16(payload) {
+                let polinomio = 0x1021;
+                let resultado = 0xFFFF;
+
+                for (let offset = 0; offset < payload.length; offset++) {
+                    resultado ^= (payload.charCodeAt(offset) << 8);
+                    for (let bitwise = 0; bitwise < 8; bitwise++) {
+                        resultado = (resultado << 1) & 0xFFFF;
+                        if ((resultado & 0x10000) !== 0) resultado ^= polinomio;
+                    }
+                }
+
+                // Ajuste: retornar 4 hex chars maiúsculos
+                return resultado.toString(16).toUpperCase().padStart(4, '0');
+            }
+
+            function gerarPayloadPix(chave, nome, cidade, valor) {
+                const gui = "BR.GOV.BCB.PIX";
+
+                // 00 = Payload Format Indicator
+                let payload = "000201";
+
+                // 26 = Merchant Account Information (GUI + chave)
+                let merchantAccountValue = `0014${gui}01${String(chave.length).padStart(2,'0')}${chave}`;
+                payload += `26${String(merchantAccountValue.length).padStart(2,'0')}${merchantAccountValue}`;
+
+                // 52 = MCC (default)
+                payload += "52040000";
+
+                // 53 = Moeda (986 = BRL)
+                payload += "5303986";
+
+                // 54 = Valor (opcional)
+                if (valor > 0) {
+                    let valorStr = valor.toFixed(2); // exemplo: "102.70"
+                    payload += `54${String(valorStr.length).padStart(2,'0')}${valorStr}`;
+                }
+
+                // 58 = País
+                payload += "5802BR";
+
+                // 59 = Nome recebedor
+                payload += `59${String(nome.length).padStart(2,'0')}${nome}`;
+
+                // 60 = Cidade
+                payload += `60${String(cidade.length).padStart(2,'0')}${cidade}`;
+
+                // 62 = Dados adicionais (identificador)
+                let adicionais = "0503***";
+                payload += `62${String(adicionais.length).padStart(2,'0')}${adicionais}`;
+
+                // 63 = CRC placeholder (6304) + CRC calculado
+                payload += "6304";
+
+                let crc = calcularCRC16(payload);
+                return payload + crc;
+            }
+
+            /* ================= Integração unificada (botão Finalizar) ================= */
+            document.addEventListener("DOMContentLoaded", function() {
+                // --- ajuste aqui suas informações ---
+                const chavePix = "11940515107"; // sua chave
+                const nomeRecebedor = "LOJA RSTECH";
+                const cidade = "SAO PAULO";
+                // -------------------------------------
+
+                const btnFinalizar = document.getElementById("finalizarCompra");
+                const pixArea = document.getElementById("pixArea");
+                const pixQRCode = document.getElementById("pixQRCode");
+                const passo2 = document.getElementById("passo2");
+                const orderForm = document.getElementById("orderForm");
+
+                // campos do cadastro (para preencher automaticamente)
+                const pedido2 = document.getElementById("pedido2");
+                const total2 = document.getElementById("total2");
+
+                if (!btnFinalizar) {
+                    console.error("botão #finalizarCompra não encontrado no DOM");
+                    return;
+                }
+
+                btnFinalizar.addEventListener("click", function(e) {
+                    e.preventDefault();
+
+                    if (!window.carrinho || window.carrinho.length === 0) {
+                        alert("Seu carrinho está vazio!");
+                        return;
+                    }
+
+                    // calcula total (numérico) a partir do carrinho (garante consistência)
+                    const valorTotal = window.carrinho.reduce((acc, item) => acc + (item.total || 0), 0);
+
+                    // gera payload e QR
+                    const payload = gerarPayloadPix(chavePix, nomeRecebedor, cidade, valorTotal);
+                    pixQRCode.src = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(payload)}&size=300x300`;
+
+                    // mostra área PIX e passo 2
+                    pixArea.style.display = "block";
+                    passo2.style.display = "block";
+
+                    // monta texto amigável do pedido
+                    const itensTexto = window.carrinho.map(it => {
+                        return `${it.qtd}x ${it.produto} (${it.tamanho || '-'} / ${it.cor || '-'}) - R$ ${it.total.toFixed(2).replace('.',',')}`;
+                    }).join("\n");
+
+                    const totalStr = `R$ ${valorTotal.toFixed(2).replace('.',',')}`;
+
+                    // preenche o form oculto que envia o pedido
+                    document.getElementById("pedido").value = itensTexto;
+                    document.getElementById("total").value = totalStr;
+
+                    // também preenche o form de cadastro (passo2) para já vir junto
+                    if (pedido2) pedido2.value = itensTexto;
+                    if (total2) total2.value = totalStr;
+
+                    // envia o form para o iframe escondido para NÃO recarregar a página
+                    // (o target="hidden_iframe" no form evita que a página principal seja substituída)
+                    orderForm.submit();
+
+                    console.log("Pedido enviado para o e-mail (via hidden_iframe).", {
+                        total: totalStr,
+                        itens: itensTexto
+                    });
+                });
+            });
+        </script>
+
+        <script>
+            const productModal = document.getElementById('productModal');
+
+            productModal.addEventListener('show.bs.modal', function(event) {
+                const button = event.relatedTarget; // botão que abriu o modal
+
+                // Pega os atributos do botão
+                const nome = button.getAttribute('data-nome');
+                const preco = button.getAttribute('data-preco');
+                const descricao = button.getAttribute('data-descricao');
+                const img = button.getAttribute('data-img');
+
+                // Preenche os campos do modal
+                document.getElementById('modalNome').textContent = nome;
+                document.getElementById('modalPreco').textContent = "R$ " + preco;
+                document.getElementById('modalDescricao').textContent = descricao;
+                document.getElementById('modalImg').src = img;
+            });
+        </script>
+
+
+        <script>
+            document.getElementById('finalizarCompra').addEventListener('click', function() {
+                const carrinho = window.carrinho || [];
+
+                if (carrinho.length === 0) {
+                    alert('Seu carrinho está vazio!');
+                    return;
+                }
+
+                // Fecha o modal do carrinho
+                const modal = bootstrap.Modal.getInstance(document.getElementById('cartModal'));
+                if (modal) modal.hide();
+
+                // Mostra o passo 2 (cadastro)
+                document.getElementById('passo2').style.display = 'block';
+                window.scrollTo({
+                    top: document.getElementById('passo2').offsetTop,
+                    behavior: 'smooth'
+                });
+
+                // Preenche os campos ocultos do formulário com os dados do pedido
+                const cartTotal = carrinho.reduce((acc, item) => acc + item.total, 0);
+                const totalStr = `R$ ${cartTotal.toFixed(2).replace('.', ',')}`;
+                const itensTexto = carrinho.map(it => {
+                    return `${it.qtd}x ${it.produto} (${it.tamanho || '-'} / ${it.cor || '-'}) - R$ ${it.total.toFixed(2).replace('.',',')}`;
+                }).join("\n");
+
+                document.getElementById('pedido2').value = itensTexto;
+                document.getElementById('total2').value = totalStr;
+
+                // Gera QR Code PIX com base no valor total
+                const valorNumerico = cartTotal.toFixed(2);
+                const chavePix = '11940515107';
+                const mensagemPix = `Pagamento PIX - Valor: R$ ${valorNumerico} - Chave: ${chavePix}`;
+                const qrCodeURL = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(mensagemPix)}&size=200x200`;
+
+                document.getElementById('pixQRCode').src = qrCodeURL;
+
+                // Exibe a área do PIX após preenchimento do cadastro
+                document.getElementById('cadastroForm').addEventListener('submit', function() {
+                    document.getElementById('pixArea').style.display = 'block';
+                });
+            });
+
+            /*document.getElementById('finalizarCompra').addEventListener('click', function() {
+                const cartItems = document.getElementById('cartItems');
+                const cartTotal = document.getElementById('cartTotal').innerText;
+                const isEmpty = cartItems.innerText.includes('Seu carrinho está vazio');
+
+                if (isEmpty) {
+                    alert('Seu carrinho está vazio!');
+                    return;
+                }
+
+                // Fecha o modal do carrinho
+                const modal = bootstrap.Modal.getInstance(document.getElementById('cartModal'));
+                modal.hide();
+
+                // Mostra o passo 2 (cadastro)
+                document.getElementById('passo2').style.display = 'block';
+                window.scrollTo({
+                    top: document.getElementById('passo2').offsetTop,
+                    behavior: 'smooth'
+                });
+
+                // Preenche os campos ocultos do formulário com os dados do pedido
+                document.getElementById('pedido2').value = cartItems.innerText;
+                document.getElementById('total2').value = cartTotal;
+
+                // Gera QR Code PIX com base no valor total
+                const valorNumerico = cartTotal.replace('R$', '').replace(',', '.').trim();
+                const chavePix = '11940515107';
+                const mensagemPix = `Pagamento PIX - Valor: R$ ${valorNumerico} - Chave: ${chavePix}`;
+                const qrCodeURL = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(mensagemPix)}&size=200x200`;
+
+                document.getElementById('pixQRCode').src = qrCodeURL;
+
+                // Exibe a área do PIX após preenchimento do cadastro
+                document.getElementById('cadastroForm').addEventListener('submit', function() {
+                    document.getElementById('pixArea').style.display = 'block';
+                });
+            });*/
+        </script>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Lojinha da Jaci</h5>
+                        <p>Maquiagem para seu dia a dia, perfumes, Cremes, e tudo para te deixar uma diva impactante. Qualidade e beleza em cada produto.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Categorias</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Perfumes</a></li>
+                            <li><a href="#">Maquiagem</a></li>
+                            <li><a href="#">Esfoliantes</a></li>
+                            <li><a href="#">Creme Corporal</a></li>
+                        </ul>
+                    </div>
+                    <div class="row mt-3">
+                        <!-- Formas de pagamento -->
+                        <div class="col-md-6">
+                            <h6>Formas de Pagamento</h6>
+                            <p>💳 Pagamento disponível via <strong>PIX</strong></p>
+                        </div>
+
+                        <!-- Formas de entrega -->
+                        <div class="col-md-6">
+                            <h6>Formas de Entrega</h6>
+                            <p>📦 Retirada pessoalmente</p>
+                            <p>🚚 Envio via Sedex ou Correios</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contato</h5>
+                        <p>Email: lojinhamakers@gmail.com</p>
+                        <p>WhatsApp: (11) 96309-2759</p>
+                        <p>Seg-Sex 9h às 18h</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-center h-screen">
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                    <p>&copy; 2025 RsTecnologia. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+
 </html>
