@@ -23,7 +23,7 @@
         }
         
         .hero {
-            background-color: rgba(217, 218, 173, 0.822);
+            background-color: rgba(221, 201, 156, 0.822);
             padding: 40px 20px;
             text-align: center;
             margin-bottom: 30px;
@@ -31,7 +31,7 @@
         
         .hero h1 {
             font-weight: bold;
-            color: rgb(165, 179, 169);
+            color: rgb(177, 206, 16);
         }
         
         .card {
@@ -71,7 +71,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">Lojinha-da-Jaci</a>
+            <a class="navbar-brand" href="#">Loja da Jaci</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -106,34 +106,34 @@
     </nav>
     <!-- HERO -->
 
-    <!--<section class="hero">
+    <section class="hero">
         <section class="py-5 text-center text-white" id="inicio" style="
-  background-image: url('capa1.png');
+  background-image: url('CAPA-SITE.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
     min-height: 450px;   
 ">
             <h1><span style="color:#8b1a8b;"></span></h1>
-        </section>-->
+        </section>
 
-    <!-- TÍTULO DA LOJINHA -->
-    <div class="text-center">
-        <h1 class="mb-4" style="color: rgb(17, 14, 14); font-size: 50px; font-weight: 700;">
+        <!-- TÍTULO DA LOJINHA -->
+        <!--<div class="text-center">
+        <h1 class="mb-4" style="color: rgb(194, 147, 17); font-size: 50px; font-weight: 700;">
             Loja da Jaci
         </h1>
         <h4>Realce sua beleza. Desperte sua autoestima. ✨</h4>
     </div>
 
-    <!-- PRODUTOS -->
+     PRODUTOS 
     <div class="container text-center">
-        <h3 class="mb-4" style="color: rgb(17, 14, 14);">
+        <h3 class="mb-4" style="color: rgb(112, 97, 8);">
             Nossos Produtos
         </h3>
 
-        <h5 class="mb-4" style="color: rgb(34, 31, 31);">
+        <h5 class="mb-4" style="color: rgba(143, 120, 17, 0.356);">
             Perfumes, esfoliantes, creme corporal, maquiagem e tudo para você cuidar de si e valorizar ainda mais a sua beleza. 💕
-        </h5>
+        </h5>-->
 
         <div class="row g-4">
             <!-- INICIO CAIXA DEPOIS DO ADICIONAR AO CARRINHO -->
@@ -187,7 +187,7 @@
                             <div class="card-body">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text"></p>
-                                <a href="noivas.html" class="btn btn-dark">Festa&Formatura</a>
+                                <a href="#" class="btn btn-dark">Festa&Formatura</a>
                             </div>
                             <div class="card-footer">
                                 <small class="text-body-secondary"></small>
@@ -200,7 +200,7 @@
                             <div class="card-body">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text"></p>
-                                <a href="noivas.html" class="btn btn-dark">Madrinha&Debutantes</a>
+                                <a href="#" class="btn btn-dark">Madrinha&Debutantes</a>
                             </div>
                             <div class="card-footer">
                                 <small class="text-body-secondary"></small>
@@ -1576,93 +1576,93 @@
                 <!-- FINAL DO MODAL DE QUANTIDADE -->
 
         </div>
-    </div>
+        </div>
 
-    <!-- FormSubmit- Formulario para compra enviar para email -->
+        <!-- FormSubmit- Formulario para compra enviar para email -->
 
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
-    <!-- Formulário que envia o pedido (vai para o iframe) -->
-    <form id="orderForm" action="https://formsubmit.co/lojinhamakers@gmail.com" method="POST" target="hidden_iframe" style="display:none;">
-        <input type="hidden" name="pedido" id="pedido">
-        <input type="hidden" name="total" id="total">
-        <input type="hidden" name="_captcha" value="false">
-    </form>
-
-    <!-- Botão único de finalizar (use apenas este) 
-                <button id="finalizarCompra" type="button">Finalizar Compra via Pix</button>-->
-
-    <!-- PASSO 2 - Cadastro + PIX (inicia escondido) -->
-    <div id="passo2" style="display:none; margin-top:20px;">
-        <h3 class="mb-4" style="color: rgb(31, 25, 25);">“Quase lá! Preencha seus dados para concluir sua compra. A equipe da Loja Makers da Jaci entrará em contato por e-mail para finalizar o processo.”</h3>
-
-
-        <form id="cadastroForm" action="https://formsubmit.co/lojinhamakers@gmail.com" method="POST">
-            <input type="hidden" name="pedido" id="pedido2">
-            <input type="hidden" name="total" id="total2">
+        <!-- Formulário que envia o pedido (vai para o iframe) -->
+        <form id="orderForm" action="https://formsubmit.co/lojinhamakers@gmail.com" method="POST" target="hidden_iframe" style="display:none;">
+            <input type="hidden" name="pedido" id="pedido">
+            <input type="hidden" name="total" id="total">
             <input type="hidden" name="_captcha" value="false">
-
-            <label class="mb-4" style="color: rgb(31, 26, 26);">Nome:</label>
-            <input type="text" name="nome" required>
-
-            <label class="mb-4" style="color: rgb(26, 22, 22);">Telefone:</label>
-            <input type="text" name="telefone" required>
-
-            <label class="mb-4" style="color: rgb(29, 23, 23);">Email:</label>
-            <input type="email" name="email" required>
-
-            <button type="submit">Confirmar Dados</button>
         </form>
 
-        <!-- Área PIX (fica escondida até clicar no botão)-->
-        <div id="pixArea" style="display:none; margin-top:20px;">
-            <h3 class="mb-4" style="color: rgb(26, 20, 20);">Pagamento via PIX</h3>
-            <p class="mb-4" style="color: rgb(31, 24, 24);">Chave Pix: <strong class="mb-4" style="color: rgb(32, 25, 25);">11949410610</strong></p>
-            <img id="pixQRCode" src="qrcode-pix.png" alt="QR Code Pix" width="200">
-            <p class="mb-4" style="color: rgb(31, 22, 22);">Após o pagamento, envie o comprovante para nosso e-mail ou WhatsApp.</p>
+        <!-- Botão único de finalizar (use apenas este) 
+                <button id="finalizarCompra" type="button">Finalizar Compra via Pix</button>-->
+
+        <!-- PASSO 2 - Cadastro + PIX (inicia escondido) -->
+        <div id="passo2" style="display:none; margin-top:20px;">
+            <h3 class="mb-4" style="color: rgb(31, 25, 25);">“Quase lá! Preencha seus dados para concluir sua compra. A equipe da Loja Makers da Jaci entrará em contato por e-mail para finalizar o processo.”</h3>
+
+
+            <form id="cadastroForm" action="https://formsubmit.co/lojinhamakers@gmail.com" method="POST">
+                <input type="hidden" name="pedido" id="pedido2">
+                <input type="hidden" name="total" id="total2">
+                <input type="hidden" name="_captcha" value="false">
+
+                <label class="mb-4" style="color: rgb(31, 26, 26);">Nome:</label>
+                <input type="text" name="nome" required>
+
+                <label class="mb-4" style="color: rgb(26, 22, 22);">Telefone:</label>
+                <input type="text" name="telefone" required>
+
+                <label class="mb-4" style="color: rgb(29, 23, 23);">Email:</label>
+                <input type="email" name="email" required>
+
+                <button type="submit">Confirmar Dados</button>
+            </form>
+
+            <!-- Área PIX (fica escondida até clicar no botão)-->
+            <div id="pixArea" style="display:none; margin-top:20px;">
+                <h3 class="mb-4" style="color: rgb(26, 20, 20);">Pagamento via PIX</h3>
+                <p class="mb-4" style="color: rgb(31, 24, 24);">Chave Pix: <strong class="mb-4" style="color: rgb(32, 25, 25);">11949410610</strong></p>
+                <img id="pixQRCode" src="qrcode-pix.png" alt="QR Code Pix" width="200">
+                <p class="mb-4" style="color: rgb(31, 22, 22);">Após o pagamento, envie o comprovante para nosso e-mail ou WhatsApp.</p>
+            </div>
         </div>
-    </div>
-    <!-- Final do FormSubmit -->
-    </div>
-    </div>
+        <!-- Final do FormSubmit -->
+        </div>
+        </div>
 
 
-    <script>
-        // ================= Carrinho Global =================
-        window.carrinho = [];
+        <script>
+            // ================= Carrinho Global =================
+            window.carrinho = [];
 
-        // ================= Adicionar ao Carrinho =================
-        function adicionarAoCarrinho(produto, preco, descricao, img, qtd = 1, ) {
-            preco = Number(preco);
-            const item = {
-                produto,
-                preco,
-                descricao,
-                img,
-                qtd,
-                total: preco * qtd
-            };
-            window.carrinho.push(item);
-            atualizarCarrinho();
-        }
+            // ================= Adicionar ao Carrinho =================
+            function adicionarAoCarrinho(produto, preco, descricao, img, qtd = 1, ) {
+                preco = Number(preco);
+                const item = {
+                    produto,
+                    preco,
+                    descricao,
+                    img,
+                    qtd,
+                    total: preco * qtd
+                };
+                window.carrinho.push(item);
+                atualizarCarrinho();
+            }
 
-        // ================= Atualizar Carrinho =================
-        function atualizarCarrinho() {
-            const cartItems = document.getElementById("cartItems");
-            const cartTotal = document.getElementById("cartTotal");
+            // ================= Atualizar Carrinho =================
+            function atualizarCarrinho() {
+                const cartItems = document.getElementById("cartItems");
+                const cartTotal = document.getElementById("cartTotal");
 
-            if (!cartItems || !cartTotal) return;
+                if (!cartItems || !cartTotal) return;
 
-            cartItems.innerHTML = "";
-            let total = 0;
+                cartItems.innerHTML = "";
+                let total = 0;
 
-            if (!window.carrinho || window.carrinho.length === 0) {
-                cartItems.innerHTML = '<p class="text-muted">Seu carrinho está vazio.</p>';
-            } else {
-                window.carrinho.forEach((item, index) => {
-                    total += item.total;
+                if (!window.carrinho || window.carrinho.length === 0) {
+                    cartItems.innerHTML = '<p class="text-muted">Seu carrinho está vazio.</p>';
+                } else {
+                    window.carrinho.forEach((item, index) => {
+                        total += item.total;
 
-                    const itemHTML = `
+                        const itemHTML = `
                 <div class="d-flex justify-content-between align-items-center border-bottom py-2">
                     <div class="d-flex align-items-center">
                         <img src="${item.img}" alt="${item.produto}" width="50" class="me-2">
@@ -1676,185 +1676,185 @@
                     <button class="btn btn-danger btn-sm ms-2" onclick="removerDoCarrinho(${index})">Remover</button>
                 </div>
             `;
-                    cartItems.insertAdjacentHTML("beforeend", itemHTML);
+                        cartItems.insertAdjacentHTML("beforeend", itemHTML);
+                    });
+                }
+
+                cartTotal.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+            }
+
+            // ================= Remover do Carrinho =================
+            function removerDoCarrinho(index) {
+                window.carrinho.splice(index, 1);
+                atualizarCarrinho();
+            }
+
+            // ================= Atualizar Preço =================
+            function atualizarPreco() {
+                const input = document.getElementById("quantidadeProduto");
+                const selecionado = document.getElementById("produtoSelecionado");
+                if (!input || !selecionado || !window.produtoTemp) return;
+
+                let qtd = parseInt(input.value);
+                let precoTotal = window.produtoTemp.preco * qtd;
+                selecionado.innerText = `${window.produtoTemp.produto} - R$ ${precoTotal.toFixed(2).replace('.', ',')}`;
+            }
+
+            // ================= Modal Quantidade =================
+            const modalQtd = document.getElementById("quantidadeModal");
+            if (modalQtd) {
+                modalQtd.addEventListener("show.bs.modal", function(event) {
+                    let button = event.relatedTarget;
+                    if (!button) return;
+
+                    let produto = button.getAttribute("data-produto");
+                    let preco = parseFloat(button.getAttribute("data-preco"));
+                    let descricao = button.getAttribute("data-descricao");
+                    let img = button.getAttribute("data-img");
+
+                    let sizesAttr = button.getAttribute("data-sizes");
+                    let colorsAttr = button.getAttribute("data-colors");
+
+                    let sizes = (sizesAttr || "").split(",").map(s => s.trim()).filter(s => s.length > 0);
+                    let colors = (colorsAttr || "").split(",").map(c => c.trim()).filter(c => c.length > 0);
+
+                    let defaultSize = button.getAttribute("data-default-size");
+                    let defaultColor = button.getAttribute("data-default-color");
+
+                    window.produtoTemp = {
+                        produto,
+                        preco,
+                        descricao,
+                        img
+                    };
+
+                    const inputQtd = document.getElementById("quantidadeProduto");
+                    if (inputQtd) inputQtd.value = 1;
+                    atualizarPreco();
+
+                    const selectSize = document.getElementById("");
+                    if (selectSize) {
+                        selectSize.innerHTML = "";
+                        if (sizes.length > 0) {
+                            sizes.forEach(size => {
+                                let option = document.createElement("option");
+                                option.value = size;
+                                option.textContent = size;
+                                if (defaultSize && size === defaultSize) option.selected = true;
+                                selectSize.appendChild(option);
+                            });
+                        } else {
+                            let option = document.createElement("option");
+                            option.value = "";
+                            option.textContent = "Único";
+                            option.selected = true;
+                            selectSize.appendChild(option);
+                        }
+                    }
+
+                    const selectColor = document.getElementById("");
+                    if (selectColor) {
+                        selectColor.innerHTML = "";
+                        if (colors.length > 0) {
+                            colors.forEach(color => {
+                                let option = document.createElement("option");
+                                option.value = color;
+                                option.textContent = color;
+                                if (defaultColor && color === defaultColor) option.selected = true;
+                                selectColor.appendChild(option);
+                            });
+                        } else {
+                            let option = document.createElement("option");
+                            option.value = "";
+                            option.textContent = "Padrão";
+                            option.selected = true;
+                            selectColor.appendChild(option);
+                        }
+                    }
                 });
             }
 
-            cartTotal.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
-        }
+            // ================= Botões + e - =================
+            const btnMais = document.getElementById("btnMais");
+            if (btnMais) {
+                btnMais.addEventListener("click", () => {
+                    const input = document.getElementById("quantidadeProduto");
+                    if (input) {
+                        input.value = parseInt(input.value) + 1;
+                        atualizarPreco();
+                    }
+                });
+            }
 
-        // ================= Remover do Carrinho =================
-        function removerDoCarrinho(index) {
-            window.carrinho.splice(index, 1);
-            atualizarCarrinho();
-        }
+            const btnMenos = document.getElementById("btnMenos");
+            if (btnMenos) {
+                btnMenos.addEventListener("click", () => {
+                    const input = document.getElementById("quantidadeProduto");
+                    if (input && parseInt(input.value) > 1) {
+                        input.value = parseInt(input.value) - 1;
+                        atualizarPreco();
+                    }
+                });
+            }
 
-        // ================= Atualizar Preço =================
-        function atualizarPreco() {
-            const input = document.getElementById("quantidadeProduto");
-            const selecionado = document.getElementById("produtoSelecionado");
-            if (!input || !selecionado || !window.produtoTemp) return;
+            // ================= Confirmar Adição =================
+            const confirmarBtn = document.getElementById("confirmarQuantidade");
+            if (confirmarBtn) {
+                confirmarBtn.addEventListener("click", () => {
+                    const qtd = parseInt(document.getElementById("quantidadeProduto").value);
 
-            let qtd = parseInt(input.value);
-            let precoTotal = window.produtoTemp.preco * qtd;
-            selecionado.innerText = `${window.produtoTemp.produto} - R$ ${precoTotal.toFixed(2).replace('.', ',')}`;
-        }
 
-        // ================= Modal Quantidade =================
-        const modalQtd = document.getElementById("quantidadeModal");
-        if (modalQtd) {
-            modalQtd.addEventListener("show.bs.modal", function(event) {
-                let button = event.relatedTarget;
-                if (!button) return;
+                    adicionarAoCarrinho(
+                        window.produtoTemp.produto,
+                        window.produtoTemp.preco,
+                        window.produtoTemp.descricao,
+                        window.produtoTemp.img,
+                        qtd,
+                    );
 
-                let produto = button.getAttribute("data-produto");
-                let preco = parseFloat(button.getAttribute("data-preco"));
-                let descricao = button.getAttribute("data-descricao");
-                let img = button.getAttribute("data-img");
+                    const modal = bootstrap.Modal.getInstance(modalQtd);
+                    if (modal) modal.hide();
 
-                let sizesAttr = button.getAttribute("data-sizes");
-                let colorsAttr = button.getAttribute("data-colors");
+                    const carrinhoModal = new bootstrap.Modal(document.getElementById("cartModal"));
+                    carrinhoModal.show();
+                });
+            }
+        </script>
 
-                let sizes = (sizesAttr || "").split(",").map(s => s.trim()).filter(s => s.length > 0);
-                let colors = (colorsAttr || "").split(",").map(c => c.trim()).filter(c => c.length > 0);
+        <script>
+            /* ================= Carrinho unificado ================= */
+            window.carrinho = [];
 
-                let defaultSize = button.getAttribute("data-default-size");
-                let defaultColor = button.getAttribute("data-default-color");
-
-                window.produtoTemp = {
+            // Adiciona produto (compatível com botões antigos)
+            function adicionarAoCarrinho(produto, preco, descricao, img, qtd = 1, ) {
+                preco = Number(preco);
+                const item = {
                     produto,
                     preco,
                     descricao,
-                    img
-                };
-
-                const inputQtd = document.getElementById("quantidadeProduto");
-                if (inputQtd) inputQtd.value = 1;
-                atualizarPreco();
-
-                const selectSize = document.getElementById("");
-                if (selectSize) {
-                    selectSize.innerHTML = "";
-                    if (sizes.length > 0) {
-                        sizes.forEach(size => {
-                            let option = document.createElement("option");
-                            option.value = size;
-                            option.textContent = size;
-                            if (defaultSize && size === defaultSize) option.selected = true;
-                            selectSize.appendChild(option);
-                        });
-                    } else {
-                        let option = document.createElement("option");
-                        option.value = "";
-                        option.textContent = "Único";
-                        option.selected = true;
-                        selectSize.appendChild(option);
-                    }
-                }
-
-                const selectColor = document.getElementById("");
-                if (selectColor) {
-                    selectColor.innerHTML = "";
-                    if (colors.length > 0) {
-                        colors.forEach(color => {
-                            let option = document.createElement("option");
-                            option.value = color;
-                            option.textContent = color;
-                            if (defaultColor && color === defaultColor) option.selected = true;
-                            selectColor.appendChild(option);
-                        });
-                    } else {
-                        let option = document.createElement("option");
-                        option.value = "";
-                        option.textContent = "Padrão";
-                        option.selected = true;
-                        selectColor.appendChild(option);
-                    }
-                }
-            });
-        }
-
-        // ================= Botões + e - =================
-        const btnMais = document.getElementById("btnMais");
-        if (btnMais) {
-            btnMais.addEventListener("click", () => {
-                const input = document.getElementById("quantidadeProduto");
-                if (input) {
-                    input.value = parseInt(input.value) + 1;
-                    atualizarPreco();
-                }
-            });
-        }
-
-        const btnMenos = document.getElementById("btnMenos");
-        if (btnMenos) {
-            btnMenos.addEventListener("click", () => {
-                const input = document.getElementById("quantidadeProduto");
-                if (input && parseInt(input.value) > 1) {
-                    input.value = parseInt(input.value) - 1;
-                    atualizarPreco();
-                }
-            });
-        }
-
-        // ================= Confirmar Adição =================
-        const confirmarBtn = document.getElementById("confirmarQuantidade");
-        if (confirmarBtn) {
-            confirmarBtn.addEventListener("click", () => {
-                const qtd = parseInt(document.getElementById("quantidadeProduto").value);
-
-
-                adicionarAoCarrinho(
-                    window.produtoTemp.produto,
-                    window.produtoTemp.preco,
-                    window.produtoTemp.descricao,
-                    window.produtoTemp.img,
+                    img,
                     qtd,
-                );
-
-                const modal = bootstrap.Modal.getInstance(modalQtd);
-                if (modal) modal.hide();
-
-                const carrinhoModal = new bootstrap.Modal(document.getElementById("cartModal"));
-                carrinhoModal.show();
-            });
-        }
-    </script>
-
-    <script>
-        /* ================= Carrinho unificado ================= */
-        window.carrinho = [];
-
-        // Adiciona produto (compatível com botões antigos)
-        function adicionarAoCarrinho(produto, preco, descricao, img, qtd = 1, ) {
-            preco = Number(preco);
-            const item = {
-                produto,
-                preco,
-                descricao,
-                img,
-                qtd,
-                total: preco * qtd
-            };
-            carrinho.push(item);
-            atualizarCarrinho();
-        }
+                    total: preco * qtd
+                };
+                carrinho.push(item);
+                atualizarCarrinho();
+            }
 
 
-        function atualizarCarrinho() {
-            const cartItems = document.getElementById("cartItems");
-            const cartTotal = document.getElementById("cartTotal");
+            function atualizarCarrinho() {
+                const cartItems = document.getElementById("cartItems");
+                const cartTotal = document.getElementById("cartTotal");
 
-            cartItems.innerHTML = "";
-            let total = 0;
+                cartItems.innerHTML = "";
+                let total = 0;
 
-            if (!carrinho || carrinho.length === 0) {
-                cartItems.innerHTML = '<p class="text-muted">Seu carrinho está vazio.</p>';
-            } else {
-                carrinho.forEach((item, index) => {
-                    total += item.total;
+                if (!carrinho || carrinho.length === 0) {
+                    cartItems.innerHTML = '<p class="text-muted">Seu carrinho está vazio.</p>';
+                } else {
+                    carrinho.forEach((item, index) => {
+                        total += item.total;
 
-                    const itemHTML = `
+                        const itemHTML = `
             <div class="d-flex justify-content-between align-items-center border-bottom py-2">
                 <div class="d-flex align-items-center">
                     <img src="${item.img}" alt="${item.produto}" width="50" class="me-2">
@@ -1868,320 +1868,320 @@
                 <button class="btn btn-danger btn-sm ms-2" onclick="removerDoCarrinho(${index})">Remover</button>
             </div>
             `;
-                    cartItems.insertAdjacentHTML("beforeend", itemHTML);
-                });
-            }
-
-            cartTotal.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
-        }
-
-        function removerDoCarrinho(index) {
-            carrinho.splice(index, 1);
-            atualizarCarrinho();
-        }
-
-        /* ================= Funções PIX (CRC + Payload) ================= */
-        function calcularCRC16(payload) {
-            let polinomio = 0x1021;
-            let resultado = 0xFFFF;
-
-            for (let offset = 0; offset < payload.length; offset++) {
-                resultado ^= (payload.charCodeAt(offset) << 8);
-                for (let bitwise = 0; bitwise < 8; bitwise++) {
-                    resultado = (resultado << 1) & 0xFFFF;
-                    if ((resultado & 0x10000) !== 0) resultado ^= polinomio;
+                        cartItems.insertAdjacentHTML("beforeend", itemHTML);
+                    });
                 }
+
+                cartTotal.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
             }
 
-            // Ajuste: retornar 4 hex chars maiúsculos
-            return resultado.toString(16).toUpperCase().padStart(4, '0');
-        }
-
-        function gerarPayloadPix(chave, nome, cidade, valor) {
-            const gui = "BR.GOV.BCB.PIX";
-
-            // 00 = Payload Format Indicator
-            let payload = "000201";
-
-            // 26 = Merchant Account Information (GUI + chave)
-            let merchantAccountValue = `0014${gui}01${String(chave.length).padStart(2,'0')}${chave}`;
-            payload += `26${String(merchantAccountValue.length).padStart(2,'0')}${merchantAccountValue}`;
-
-            // 52 = MCC (default)
-            payload += "52040000";
-
-            // 53 = Moeda (986 = BRL)
-            payload += "5303986";
-
-            // 54 = Valor (opcional)
-            if (valor > 0) {
-                let valorStr = valor.toFixed(2); // exemplo: "102.70"
-                payload += `54${String(valorStr.length).padStart(2,'0')}${valorStr}`;
+            function removerDoCarrinho(index) {
+                carrinho.splice(index, 1);
+                atualizarCarrinho();
             }
 
-            // 58 = País
-            payload += "5802BR";
+            /* ================= Funções PIX (CRC + Payload) ================= */
+            function calcularCRC16(payload) {
+                let polinomio = 0x1021;
+                let resultado = 0xFFFF;
 
-            // 59 = Nome recebedor
-            payload += `59${String(nome.length).padStart(2,'0')}${nome}`;
+                for (let offset = 0; offset < payload.length; offset++) {
+                    resultado ^= (payload.charCodeAt(offset) << 8);
+                    for (let bitwise = 0; bitwise < 8; bitwise++) {
+                        resultado = (resultado << 1) & 0xFFFF;
+                        if ((resultado & 0x10000) !== 0) resultado ^= polinomio;
+                    }
+                }
 
-            // 60 = Cidade
-            payload += `60${String(cidade.length).padStart(2,'0')}${cidade}`;
-
-            // 62 = Dados adicionais (identificador)
-            let adicionais = "0503***";
-            payload += `62${String(adicionais.length).padStart(2,'0')}${adicionais}`;
-
-            // 63 = CRC placeholder (6304) + CRC calculado
-            payload += "6304";
-
-            let crc = calcularCRC16(payload);
-            return payload + crc;
-        }
-
-        /* ================= Integração unificada (botão Finalizar) ================= */
-        document.addEventListener("DOMContentLoaded", function() {
-            // --- ajuste aqui suas informações ---
-            const chavePix = "11949410610"; // sua chave
-            const nomeRecebedor = "LOJINHA DA JACI";
-            const cidade = "SAO PAULO";
-            // -------------------------------------
-
-            const btnFinalizar = document.getElementById("finalizarCompra");
-            const pixArea = document.getElementById("pixArea");
-            const pixQRCode = document.getElementById("pixQRCode");
-            const passo2 = document.getElementById("passo2");
-            const orderForm = document.getElementById("orderForm");
-
-            // campos do cadastro (para preencher automaticamente)
-            const pedido2 = document.getElementById("pedido2");
-            const total2 = document.getElementById("total2");
-
-            if (!btnFinalizar) {
-                console.error("botão #finalizarCompra não encontrado no DOM");
-                return;
+                // Ajuste: retornar 4 hex chars maiúsculos
+                return resultado.toString(16).toUpperCase().padStart(4, '0');
             }
 
-            btnFinalizar.addEventListener("click", function(e) {
-                e.preventDefault();
+            function gerarPayloadPix(chave, nome, cidade, valor) {
+                const gui = "BR.GOV.BCB.PIX";
 
-                if (!window.carrinho || window.carrinho.length === 0) {
-                    alert("Seu carrinho está vazio!");
+                // 00 = Payload Format Indicator
+                let payload = "000201";
+
+                // 26 = Merchant Account Information (GUI + chave)
+                let merchantAccountValue = `0014${gui}01${String(chave.length).padStart(2,'0')}${chave}`;
+                payload += `26${String(merchantAccountValue.length).padStart(2,'0')}${merchantAccountValue}`;
+
+                // 52 = MCC (default)
+                payload += "52040000";
+
+                // 53 = Moeda (986 = BRL)
+                payload += "5303986";
+
+                // 54 = Valor (opcional)
+                if (valor > 0) {
+                    let valorStr = valor.toFixed(2); // exemplo: "102.70"
+                    payload += `54${String(valorStr.length).padStart(2,'0')}${valorStr}`;
+                }
+
+                // 58 = País
+                payload += "5802BR";
+
+                // 59 = Nome recebedor
+                payload += `59${String(nome.length).padStart(2,'0')}${nome}`;
+
+                // 60 = Cidade
+                payload += `60${String(cidade.length).padStart(2,'0')}${cidade}`;
+
+                // 62 = Dados adicionais (identificador)
+                let adicionais = "0503***";
+                payload += `62${String(adicionais.length).padStart(2,'0')}${adicionais}`;
+
+                // 63 = CRC placeholder (6304) + CRC calculado
+                payload += "6304";
+
+                let crc = calcularCRC16(payload);
+                return payload + crc;
+            }
+
+            /* ================= Integração unificada (botão Finalizar) ================= */
+            document.addEventListener("DOMContentLoaded", function() {
+                // --- ajuste aqui suas informações ---
+                const chavePix = "11949410610"; // sua chave
+                const nomeRecebedor = "LOJINHA DA JACI";
+                const cidade = "SAO PAULO";
+                // -------------------------------------
+
+                const btnFinalizar = document.getElementById("finalizarCompra");
+                const pixArea = document.getElementById("pixArea");
+                const pixQRCode = document.getElementById("pixQRCode");
+                const passo2 = document.getElementById("passo2");
+                const orderForm = document.getElementById("orderForm");
+
+                // campos do cadastro (para preencher automaticamente)
+                const pedido2 = document.getElementById("pedido2");
+                const total2 = document.getElementById("total2");
+
+                if (!btnFinalizar) {
+                    console.error("botão #finalizarCompra não encontrado no DOM");
                     return;
                 }
 
-                // calcula total (numérico) a partir do carrinho (garante consistência)
-                const valorTotal = window.carrinho.reduce((acc, item) => acc + (item.total || 0), 0);
+                btnFinalizar.addEventListener("click", function(e) {
+                    e.preventDefault();
 
-                // gera payload e QR
-                const payload = gerarPayloadPix(chavePix, nomeRecebedor, cidade, valorTotal);
-                pixQRCode.src = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(payload)}&size=300x300`;
+                    if (!window.carrinho || window.carrinho.length === 0) {
+                        alert("Seu carrinho está vazio!");
+                        return;
+                    }
 
-                // mostra área PIX e passo 2
-                pixArea.style.display = "block";
-                passo2.style.display = "block";
+                    // calcula total (numérico) a partir do carrinho (garante consistência)
+                    const valorTotal = window.carrinho.reduce((acc, item) => acc + (item.total || 0), 0);
 
-                // monta texto amigável do pedido
-                const itensTexto = window.carrinho.map(it => {
+                    // gera payload e QR
+                    const payload = gerarPayloadPix(chavePix, nomeRecebedor, cidade, valorTotal);
+                    pixQRCode.src = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(payload)}&size=300x300`;
+
+                    // mostra área PIX e passo 2
+                    pixArea.style.display = "block";
+                    passo2.style.display = "block";
+
+                    // monta texto amigável do pedido
+                    const itensTexto = window.carrinho.map(it => {
+                        return `${it.qtd}x ${it.produto} (${it.tamanho || '-'} / ${it.cor || '-'}) - R$ ${it.total.toFixed(2).replace('.',',')}`;
+                    }).join("\n");
+
+                    const totalStr = `R$ ${valorTotal.toFixed(2).replace('.',',')}`;
+
+                    // preenche o form oculto que envia o pedido
+                    document.getElementById("pedido").value = itensTexto;
+                    document.getElementById("total").value = totalStr;
+
+                    // também preenche o form de cadastro (passo2) para já vir junto
+                    if (pedido2) pedido2.value = itensTexto;
+                    if (total2) total2.value = totalStr;
+
+                    // envia o form para o iframe escondido para NÃO recarregar a página
+                    // (o target="hidden_iframe" no form evita que a página principal seja substituída)
+                    orderForm.submit();
+
+                    console.log("Pedido enviado para o e-mail (via hidden_iframe).", {
+                        total: totalStr,
+                        itens: itensTexto
+                    });
+                });
+            });
+        </script>
+
+        <script>
+            const productModal = document.getElementById('productModal');
+
+            productModal.addEventListener('show.bs.modal', function(event) {
+                const button = event.relatedTarget; // botão que abriu o modal
+
+                // Pega os atributos do botão
+                const nome = button.getAttribute('data-nome');
+                const preco = button.getAttribute('data-preco');
+                const descricao = button.getAttribute('data-descricao');
+                const img = button.getAttribute('data-img');
+
+                // Preenche os campos do modal
+                document.getElementById('modalNome').textContent = nome;
+                document.getElementById('modalPreco').textContent = "R$ " + preco;
+                document.getElementById('modalDescricao').textContent = descricao;
+                document.getElementById('modalImg').src = img;
+            });
+        </script>
+
+
+        <script>
+            document.getElementById('finalizarCompra').addEventListener('click', function() {
+                const carrinho = window.carrinho || [];
+
+                if (carrinho.length === 0) {
+                    alert('Seu carrinho está vazio!');
+                    return;
+                }
+
+                // Fecha o modal do carrinho
+                const modal = bootstrap.Modal.getInstance(document.getElementById('cartModal'));
+                if (modal) modal.hide();
+
+                // Mostra o passo 2 (cadastro)
+                document.getElementById('passo2').style.display = 'block';
+                window.scrollTo({
+                    top: document.getElementById('passo2').offsetTop,
+                    behavior: 'smooth'
+                });
+
+                // Preenche os campos ocultos do formulário com os dados do pedido
+                const cartTotal = carrinho.reduce((acc, item) => acc + item.total, 0);
+                const totalStr = `R$ ${cartTotal.toFixed(2).replace('.', ',')}`;
+                const itensTexto = carrinho.map(it => {
                     return `${it.qtd}x ${it.produto} (${it.tamanho || '-'} / ${it.cor || '-'}) - R$ ${it.total.toFixed(2).replace('.',',')}`;
                 }).join("\n");
 
-                const totalStr = `R$ ${valorTotal.toFixed(2).replace('.',',')}`;
+                document.getElementById('pedido2').value = itensTexto;
+                document.getElementById('total2').value = totalStr;
 
-                // preenche o form oculto que envia o pedido
-                document.getElementById("pedido").value = itensTexto;
-                document.getElementById("total").value = totalStr;
+                // Gera QR Code PIX com base no valor total
+                const valorNumerico = cartTotal.toFixed(2);
+                const chavePix = '11949410610';
+                const mensagemPix = `Pagamento PIX - Valor: R$ ${valorNumerico} - Chave: ${chavePix}`;
+                const qrCodeURL = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(mensagemPix)}&size=200x200`;
 
-                // também preenche o form de cadastro (passo2) para já vir junto
-                if (pedido2) pedido2.value = itensTexto;
-                if (total2) total2.value = totalStr;
+                document.getElementById('pixQRCode').src = qrCodeURL;
 
-                // envia o form para o iframe escondido para NÃO recarregar a página
-                // (o target="hidden_iframe" no form evita que a página principal seja substituída)
-                orderForm.submit();
-
-                console.log("Pedido enviado para o e-mail (via hidden_iframe).", {
-                    total: totalStr,
-                    itens: itensTexto
+                // Exibe a área do PIX após preenchimento do cadastro
+                document.getElementById('cadastroForm').addEventListener('submit', function() {
+                    document.getElementById('pixArea').style.display = 'block';
                 });
             });
-        });
-    </script>
 
-    <script>
-        const productModal = document.getElementById('productModal');
+            /*document.getElementById('finalizarCompra').addEventListener('click', function() {
+                const cartItems = document.getElementById('cartItems');
+                const cartTotal = document.getElementById('cartTotal').innerText;
+                const isEmpty = cartItems.innerText.includes('Seu carrinho está vazio');
 
-        productModal.addEventListener('show.bs.modal', function(event) {
-            const button = event.relatedTarget; // botão que abriu o modal
+                if (isEmpty) {
+                    alert('Seu carrinho está vazio!');
+                    return;
+                }
 
-            // Pega os atributos do botão
-            const nome = button.getAttribute('data-nome');
-            const preco = button.getAttribute('data-preco');
-            const descricao = button.getAttribute('data-descricao');
-            const img = button.getAttribute('data-img');
+                // Fecha o modal do carrinho
+                const modal = bootstrap.Modal.getInstance(document.getElementById('cartModal'));
+                modal.hide();
 
-            // Preenche os campos do modal
-            document.getElementById('modalNome').textContent = nome;
-            document.getElementById('modalPreco').textContent = "R$ " + preco;
-            document.getElementById('modalDescricao').textContent = descricao;
-            document.getElementById('modalImg').src = img;
-        });
-    </script>
+                // Mostra o passo 2 (cadastro)
+                document.getElementById('passo2').style.display = 'block';
+                window.scrollTo({
+                    top: document.getElementById('passo2').offsetTop,
+                    behavior: 'smooth'
+                });
 
+                // Preenche os campos ocultos do formulário com os dados do pedido
+                document.getElementById('pedido2').value = cartItems.innerText;
+                document.getElementById('total2').value = cartTotal;
 
-    <script>
-        document.getElementById('finalizarCompra').addEventListener('click', function() {
-            const carrinho = window.carrinho || [];
+                // Gera QR Code PIX com base no valor total
+                const valorNumerico = cartTotal.replace('R$', '').replace(',', '.').trim();
+                const chavePix = '11940515107';
+                const mensagemPix = `Pagamento PIX - Valor: R$ ${valorNumerico} - Chave: ${chavePix}`;
+                const qrCodeURL = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(mensagemPix)}&size=200x200`;
 
-            if (carrinho.length === 0) {
-                alert('Seu carrinho está vazio!');
-                return;
-            }
+                document.getElementById('pixQRCode').src = qrCodeURL;
 
-            // Fecha o modal do carrinho
-            const modal = bootstrap.Modal.getInstance(document.getElementById('cartModal'));
-            if (modal) modal.hide();
-
-            // Mostra o passo 2 (cadastro)
-            document.getElementById('passo2').style.display = 'block';
-            window.scrollTo({
-                top: document.getElementById('passo2').offsetTop,
-                behavior: 'smooth'
-            });
-
-            // Preenche os campos ocultos do formulário com os dados do pedido
-            const cartTotal = carrinho.reduce((acc, item) => acc + item.total, 0);
-            const totalStr = `R$ ${cartTotal.toFixed(2).replace('.', ',')}`;
-            const itensTexto = carrinho.map(it => {
-                return `${it.qtd}x ${it.produto} (${it.tamanho || '-'} / ${it.cor || '-'}) - R$ ${it.total.toFixed(2).replace('.',',')}`;
-            }).join("\n");
-
-            document.getElementById('pedido2').value = itensTexto;
-            document.getElementById('total2').value = totalStr;
-
-            // Gera QR Code PIX com base no valor total
-            const valorNumerico = cartTotal.toFixed(2);
-            const chavePix = '11949410610';
-            const mensagemPix = `Pagamento PIX - Valor: R$ ${valorNumerico} - Chave: ${chavePix}`;
-            const qrCodeURL = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(mensagemPix)}&size=200x200`;
-
-            document.getElementById('pixQRCode').src = qrCodeURL;
-
-            // Exibe a área do PIX após preenchimento do cadastro
-            document.getElementById('cadastroForm').addEventListener('submit', function() {
-                document.getElementById('pixArea').style.display = 'block';
-            });
-        });
-
-        /*document.getElementById('finalizarCompra').addEventListener('click', function() {
-            const cartItems = document.getElementById('cartItems');
-            const cartTotal = document.getElementById('cartTotal').innerText;
-            const isEmpty = cartItems.innerText.includes('Seu carrinho está vazio');
-
-            if (isEmpty) {
-                alert('Seu carrinho está vazio!');
-                return;
-            }
-
-            // Fecha o modal do carrinho
-            const modal = bootstrap.Modal.getInstance(document.getElementById('cartModal'));
-            modal.hide();
-
-            // Mostra o passo 2 (cadastro)
-            document.getElementById('passo2').style.display = 'block';
-            window.scrollTo({
-                top: document.getElementById('passo2').offsetTop,
-                behavior: 'smooth'
-            });
-
-            // Preenche os campos ocultos do formulário com os dados do pedido
-            document.getElementById('pedido2').value = cartItems.innerText;
-            document.getElementById('total2').value = cartTotal;
-
-            // Gera QR Code PIX com base no valor total
-            const valorNumerico = cartTotal.replace('R$', '').replace(',', '.').trim();
-            const chavePix = '11940515107';
-            const mensagemPix = `Pagamento PIX - Valor: R$ ${valorNumerico} - Chave: ${chavePix}`;
-            const qrCodeURL = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(mensagemPix)}&size=200x200`;
-
-            document.getElementById('pixQRCode').src = qrCodeURL;
-
-            // Exibe a área do PIX após preenchimento do cadastro
-            document.getElementById('cadastroForm').addEventListener('submit', function() {
-                document.getElementById('pixArea').style.display = 'block';
-            });
-        });*/
-    </script>
+                // Exibe a área do PIX após preenchimento do cadastro
+                document.getElementById('cadastroForm').addEventListener('submit', function() {
+                    document.getElementById('pixArea').style.display = 'block';
+                });
+            });*/
+        </script>
 
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Lojinha da Jaci</h5>
-                    <p>Maquiagem para seu dia a dia, perfumes, Cremes, e tudo para te deixar uma diva impactante. Qualidade e beleza em cada produto.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Categorias</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Perfumes</a></li>
-                        <li><a href="#">Maquiagem</a></li>
-                        <li><a href="#">Esfoliantes</a></li>
-                        <li><a href="#">Creme Corporal</a></li>
-                    </ul>
-                </div>
-                <div class="row mt-3">
-                    <!-- Formas de pagamento -->
-                    <div class="col-md-6">
-                        <h6>Formas de Pagamento</h6>
-                        <p>💳 Pagamento disponível via <strong>PIX</strong></p>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Lojinha da Jaci</h5>
+                        <p>Maquiagem para seu dia a dia, perfumes, Cremes, e tudo para te deixar uma diva impactante. Qualidade e beleza em cada produto.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Categorias</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Perfumes</a></li>
+                            <li><a href="#">Maquiagem</a></li>
+                            <li><a href="#">Esfoliantes</a></li>
+                            <li><a href="#">Creme Corporal</a></li>
+                        </ul>
+                    </div>
+                    <div class="row mt-3">
+                        <!-- Formas de pagamento -->
+                        <div class="col-md-6">
+                            <h6>Formas de Pagamento</h6>
+                            <p>💳 Pagamento disponível via <strong>PIX</strong></p>
+                        </div>
+
+                        <!-- Formas de entrega -->
+                        <div class="col-md-6">
+                            <h6>Formas de Entrega</h6>
+                            <p>📦 Retirada pessoalmente</p>
+                            <p>🚚 Envio via Sedex ou Correios</p>
+                        </div>
                     </div>
 
-                    <!-- Formas de entrega -->
-                    <div class="col-md-6">
-                        <h6>Formas de Entrega</h6>
-                        <p>📦 Retirada pessoalmente</p>
-                        <p>🚚 Envio via Sedex ou Correios</p>
+                    <div class="container">
+                        <div class="d-flex justify-content-center gap-4">
+                            <a href="https://wa.me/message/VQWFARFJUMIQO1">
+                                <i class=" bi bi-whatsapp fs-4 "></i> WhatsApp
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <p><i class="bi bi-whatsapp me-2"></i> <i class="bi bi-instagram"></i></p>
-                <div class="container">
-                    <div class="d-flex justify-content-center gap-4">
-                        <a href="https://wa.me/message/VQWFARFJUMIQO1">
-                            <i class=" bi bi-whatsapp fs-4 "></i> WhatsApp
-                        </a>
+                    <div class="container">
+                        <div class="d-flex justify-content-center gap-4">
+                            <a href="https://www.instagram.com/jociara_js_?stkn=cHkzbDY1MDNucHQw">
+                                <i class="bi bi-instagram fs-4 "></i> Instagram
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="container">
-                    <div class="d-flex justify-content-center gap-4">
-                        <a href="https://www.instagram.com/jociara_js_?stkn=cHkzbDY1MDNucHQw">
-                            <i class="bi bi-instagram fs-4 "></i> Instagram
-                        </a>
+                    <div class="col-md-4">
+                        <h5>Contato</h5>
+                        <p>Email: lojinhamakers@gmail.com</p>
+                        <p>WhatsApp: (11) 93232-3442</p>
+                        <p>Seg-Sex 9h às 18h</p>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <h5>Contato</h5>
-                    <p>Email: lojinhamakers@gmail.com</p>
-                    <p>WhatsApp: (11) 96309-2759</p>
-                    <p>Seg-Sex 9h às 18h</p>
                 </div>
             </div>
-        </div>
-        <div class="flex items-center justify-center h-screen">
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p> 2026 RsTecnologia. Todos os direitos reservados.</p>
-                <p class="small">
-                    <a href="#" class="text-decoration-none text-light">Política de Privacidade</a> |
-                    <a href="#" class="text-decoration-none text-light">Termos de Serviço</a> |
-                    <a href="#" class="text-decoration-none text-light">LGPD</a>
-                </p>
+            <div class="flex items-center justify-center h-screen">
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                    <p> 2026 RsTecnologia. Todos os direitos reservados.</p>
+                    <p class="small">
+                        <a href="#" class="text-decoration-none text-light">Política de Privacidade</a> |
+                        <a href="#" class="text-decoration-none text-light">Termos de Serviço</a> |
+                        <a href="#" class="text-decoration-none text-light">LGPD</a>
+                    </p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    </body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        </body>
 
 </html>
